@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Welcome
+    </ion-title>
+  </ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size=12 size-md>
+          <h1 class="home-title" padding>Contratos</h1>
+          <ion-label padding>Próximas tarefas</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-searchbar size=3 auto-hide="true" padding color="primary"></ion-searchbar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-header>
+
+<!-- content -->
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-align-items-start">
+      <ion-col size-sm="12" size-md="6" size-lg="3" *ngFor="let tarefa of tarefas">
+        <ion-card>
+          <ion-card-header>
+            <ion-badge color="{{ tarefa.badge }}">{{ tarefa.category }}</ion-badge>
+            <ion-card-title padding-bottom padding-top>{{ tarefa.title }}</ion-card-title>
+            <ion-card-subtitle padding-left>{{ tarefa.subtitle }}</ion-card-subtitle>
+            <ion-grid>
+              <ion-row no-padding>
+                <ion-col no-padding>
+                  <ion-item href="#" no-padding no-margin>
+                    <ion-icon name="calendar" slot="start"></ion-icon>
+                    <ion-label padding>{{ tarefa.dueDate }}</ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      
+    </ion-row>
+    <ion-row>
+      
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
+  <ion-card>
+    <ion-item href="#" class="activated">
+      <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-label>Card Link Item 1 .activated</ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Card Link Item 2</ion-label>
+    </ion-item>
+  
+    <ion-item class="activated">
+      <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-label>Card Button Item 1 .activated</ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Card Button Item 2</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
+
+
+<!-- Footer -->
+
+<ion-footer>
+    <ion-tab-bar>
+      <ion-tabs>
+        <ion-tab-bar slot="top">
+          <ion-tab-button tab="schedule">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Calendário</ion-label>
+            <ion-badge>6</ion-badge>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="contratos">
+            <ion-icon name="document"></ion-icon>
+            <ion-label>Contratos</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="eventos">
+            <ion-icon name="easel"></ion-icon>
+            <ion-label>Eventos</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="escola">
+            <ion-icon name="book"></ion-icon>
+            <ion-label>Escola</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-tab-bar>
+</ion-footer >
